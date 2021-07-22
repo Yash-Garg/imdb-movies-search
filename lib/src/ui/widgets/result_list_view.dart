@@ -33,7 +33,7 @@ class ResultListView extends StatelessWidget {
         }
 
         return Card(
-          margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+          margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -75,6 +75,7 @@ class ResultListView extends StatelessWidget {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
+                  SizedBox(height: 10),
                 ],
               ),
             ),

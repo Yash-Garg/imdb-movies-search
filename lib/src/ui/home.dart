@@ -84,35 +84,38 @@ class CustomSearchBar extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          height: 50,
-          decoration: BoxDecoration(
-            color: Colors.black12,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          padding: EdgeInsets.only(left: 15),
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                child: TextField(
-                  cursorColor: Colors.black,
-                  enableSuggestions: true,
-                  controller: searchController,
-                  decoration: InputDecoration(
-                    hintText: 'Search for Movies',
-                    border: InputBorder.none,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 5),
+          child: Container(
+            height: 50,
+            decoration: BoxDecoration(
+              color: Colors.black12,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            padding: EdgeInsets.only(left: 15),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: TextField(
+                    cursorColor: Colors.black,
+                    enableSuggestions: true,
+                    controller: searchController,
+                    decoration: InputDecoration(
+                      hintText: 'Search for Movies',
+                      border: InputBorder.none,
+                    ),
+                    onSubmitted: (value) async =>
+                        context.read(moviesProvider.notifier).getResults(value),
                   ),
-                  onSubmitted: (value) async =>
-                      context.read(moviesProvider.notifier).getResults(value),
                 ),
-              ),
-              IconButton(
-                onPressed: () => context
-                    .read(moviesProvider.notifier)
-                    .getResults(searchController.text),
-                icon: Icon(Icons.search),
-              ),
-            ],
+                IconButton(
+                  onPressed: () => context
+                      .read(moviesProvider.notifier)
+                      .getResults(searchController.text),
+                  icon: Icon(Icons.search),
+                ),
+              ],
+            ),
           ),
         ),
       ],
