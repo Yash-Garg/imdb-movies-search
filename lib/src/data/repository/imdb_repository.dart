@@ -8,7 +8,5 @@ class ImdbRepository {
   ImdbRepository(this.read);
   final Reader read;
 
-  // Future<List<Result>> getSearchResults(String query) {
-  //   return Future.value(<Result>[]);
-  // }
+  // Future<List<Result>> getSearchResults(String query) {}
 }

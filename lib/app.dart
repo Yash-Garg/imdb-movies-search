@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'src/theme/app_theme.dart';
 import 'src/ui/home.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'IMDB Task App',
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      theme: appTheme,
     );
   }
 }
