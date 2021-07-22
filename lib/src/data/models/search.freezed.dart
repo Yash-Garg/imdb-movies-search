@@ -245,33 +245,19 @@ class _$ResultTearOff {
   const _$ResultTearOff();
 
   _Result call(
-      {required bool adult,
-      required String? backdrop_path,
-      required List<int> genre_ids,
+      {required List<int> genre_ids,
       required int id,
-      required String original_language,
       required String original_title,
-      required String overview,
-      required double popularity,
       required String? poster_path,
-      required String release_date,
       required String title,
-      required bool video,
       required double vote_average,
       required int vote_count}) {
     return _Result(
-      adult: adult,
-      backdrop_path: backdrop_path,
       genre_ids: genre_ids,
       id: id,
-      original_language: original_language,
       original_title: original_title,
-      overview: overview,
-      popularity: popularity,
       poster_path: poster_path,
-      release_date: release_date,
       title: title,
-      video: video,
       vote_average: vote_average,
       vote_count: vote_count,
     );
@@ -287,18 +273,11 @@ const $Result = _$ResultTearOff();
 
 /// @nodoc
 mixin _$Result {
-  bool get adult => throw _privateConstructorUsedError;
-  String? get backdrop_path => throw _privateConstructorUsedError;
   List<int> get genre_ids => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
-  String get original_language => throw _privateConstructorUsedError;
   String get original_title => throw _privateConstructorUsedError;
-  String get overview => throw _privateConstructorUsedError;
-  double get popularity => throw _privateConstructorUsedError;
   String? get poster_path => throw _privateConstructorUsedError;
-  String get release_date => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  bool get video => throw _privateConstructorUsedError;
   double get vote_average => throw _privateConstructorUsedError;
   int get vote_count => throw _privateConstructorUsedError;
 
@@ -312,18 +291,11 @@ abstract class $ResultCopyWith<$Res> {
   factory $ResultCopyWith(Result value, $Res Function(Result) then) =
       _$ResultCopyWithImpl<$Res>;
   $Res call(
-      {bool adult,
-      String? backdrop_path,
-      List<int> genre_ids,
+      {List<int> genre_ids,
       int id,
-      String original_language,
       String original_title,
-      String overview,
-      double popularity,
       String? poster_path,
-      String release_date,
       String title,
-      bool video,
       double vote_average,
       int vote_count});
 }
@@ -338,30 +310,15 @@ class _$ResultCopyWithImpl<$Res> implements $ResultCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? adult = freezed,
-    Object? backdrop_path = freezed,
     Object? genre_ids = freezed,
     Object? id = freezed,
-    Object? original_language = freezed,
     Object? original_title = freezed,
-    Object? overview = freezed,
-    Object? popularity = freezed,
     Object? poster_path = freezed,
-    Object? release_date = freezed,
     Object? title = freezed,
-    Object? video = freezed,
     Object? vote_average = freezed,
     Object? vote_count = freezed,
   }) {
     return _then(_value.copyWith(
-      adult: adult == freezed
-          ? _value.adult
-          : adult // ignore: cast_nullable_to_non_nullable
-              as bool,
-      backdrop_path: backdrop_path == freezed
-          ? _value.backdrop_path
-          : backdrop_path // ignore: cast_nullable_to_non_nullable
-              as String?,
       genre_ids: genre_ids == freezed
           ? _value.genre_ids
           : genre_ids // ignore: cast_nullable_to_non_nullable
@@ -370,38 +327,18 @@ class _$ResultCopyWithImpl<$Res> implements $ResultCopyWith<$Res> {
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      original_language: original_language == freezed
-          ? _value.original_language
-          : original_language // ignore: cast_nullable_to_non_nullable
-              as String,
       original_title: original_title == freezed
           ? _value.original_title
           : original_title // ignore: cast_nullable_to_non_nullable
               as String,
-      overview: overview == freezed
-          ? _value.overview
-          : overview // ignore: cast_nullable_to_non_nullable
-              as String,
-      popularity: popularity == freezed
-          ? _value.popularity
-          : popularity // ignore: cast_nullable_to_non_nullable
-              as double,
       poster_path: poster_path == freezed
           ? _value.poster_path
           : poster_path // ignore: cast_nullable_to_non_nullable
               as String?,
-      release_date: release_date == freezed
-          ? _value.release_date
-          : release_date // ignore: cast_nullable_to_non_nullable
-              as String,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      video: video == freezed
-          ? _value.video
-          : video // ignore: cast_nullable_to_non_nullable
-              as bool,
       vote_average: vote_average == freezed
           ? _value.vote_average
           : vote_average // ignore: cast_nullable_to_non_nullable
@@ -420,18 +357,11 @@ abstract class _$ResultCopyWith<$Res> implements $ResultCopyWith<$Res> {
       __$ResultCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool adult,
-      String? backdrop_path,
-      List<int> genre_ids,
+      {List<int> genre_ids,
       int id,
-      String original_language,
       String original_title,
-      String overview,
-      double popularity,
       String? poster_path,
-      String release_date,
       String title,
-      bool video,
       double vote_average,
       int vote_count});
 }
@@ -447,30 +377,15 @@ class __$ResultCopyWithImpl<$Res> extends _$ResultCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? adult = freezed,
-    Object? backdrop_path = freezed,
     Object? genre_ids = freezed,
     Object? id = freezed,
-    Object? original_language = freezed,
     Object? original_title = freezed,
-    Object? overview = freezed,
-    Object? popularity = freezed,
     Object? poster_path = freezed,
-    Object? release_date = freezed,
     Object? title = freezed,
-    Object? video = freezed,
     Object? vote_average = freezed,
     Object? vote_count = freezed,
   }) {
     return _then(_Result(
-      adult: adult == freezed
-          ? _value.adult
-          : adult // ignore: cast_nullable_to_non_nullable
-              as bool,
-      backdrop_path: backdrop_path == freezed
-          ? _value.backdrop_path
-          : backdrop_path // ignore: cast_nullable_to_non_nullable
-              as String?,
       genre_ids: genre_ids == freezed
           ? _value.genre_ids
           : genre_ids // ignore: cast_nullable_to_non_nullable
@@ -479,38 +394,18 @@ class __$ResultCopyWithImpl<$Res> extends _$ResultCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      original_language: original_language == freezed
-          ? _value.original_language
-          : original_language // ignore: cast_nullable_to_non_nullable
-              as String,
       original_title: original_title == freezed
           ? _value.original_title
           : original_title // ignore: cast_nullable_to_non_nullable
               as String,
-      overview: overview == freezed
-          ? _value.overview
-          : overview // ignore: cast_nullable_to_non_nullable
-              as String,
-      popularity: popularity == freezed
-          ? _value.popularity
-          : popularity // ignore: cast_nullable_to_non_nullable
-              as double,
       poster_path: poster_path == freezed
           ? _value.poster_path
           : poster_path // ignore: cast_nullable_to_non_nullable
               as String?,
-      release_date: release_date == freezed
-          ? _value.release_date
-          : release_date // ignore: cast_nullable_to_non_nullable
-              as String,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      video: video == freezed
-          ? _value.video
-          : video // ignore: cast_nullable_to_non_nullable
-              as bool,
       vote_average: vote_average == freezed
           ? _value.vote_average
           : vote_average // ignore: cast_nullable_to_non_nullable
@@ -527,18 +422,11 @@ class __$ResultCopyWithImpl<$Res> extends _$ResultCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Result implements _Result {
   _$_Result(
-      {required this.adult,
-      required this.backdrop_path,
-      required this.genre_ids,
+      {required this.genre_ids,
       required this.id,
-      required this.original_language,
       required this.original_title,
-      required this.overview,
-      required this.popularity,
       required this.poster_path,
-      required this.release_date,
       required this.title,
-      required this.video,
       required this.vote_average,
       required this.vote_count});
 
@@ -546,29 +434,15 @@ class _$_Result implements _Result {
       _$_$_ResultFromJson(json);
 
   @override
-  final bool adult;
-  @override
-  final String? backdrop_path;
-  @override
   final List<int> genre_ids;
   @override
   final int id;
   @override
-  final String original_language;
-  @override
   final String original_title;
-  @override
-  final String overview;
-  @override
-  final double popularity;
   @override
   final String? poster_path;
   @override
-  final String release_date;
-  @override
   final String title;
-  @override
-  final bool video;
   @override
   final double vote_average;
   @override
@@ -576,45 +450,26 @@ class _$_Result implements _Result {
 
   @override
   String toString() {
-    return 'Result(adult: $adult, backdrop_path: $backdrop_path, genre_ids: $genre_ids, id: $id, original_language: $original_language, original_title: $original_title, overview: $overview, popularity: $popularity, poster_path: $poster_path, release_date: $release_date, title: $title, video: $video, vote_average: $vote_average, vote_count: $vote_count)';
+    return 'Result(genre_ids: $genre_ids, id: $id, original_title: $original_title, poster_path: $poster_path, title: $title, vote_average: $vote_average, vote_count: $vote_count)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Result &&
-            (identical(other.adult, adult) ||
-                const DeepCollectionEquality().equals(other.adult, adult)) &&
-            (identical(other.backdrop_path, backdrop_path) ||
-                const DeepCollectionEquality()
-                    .equals(other.backdrop_path, backdrop_path)) &&
             (identical(other.genre_ids, genre_ids) ||
                 const DeepCollectionEquality()
                     .equals(other.genre_ids, genre_ids)) &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.original_language, original_language) ||
-                const DeepCollectionEquality()
-                    .equals(other.original_language, original_language)) &&
             (identical(other.original_title, original_title) ||
                 const DeepCollectionEquality()
                     .equals(other.original_title, original_title)) &&
-            (identical(other.overview, overview) ||
-                const DeepCollectionEquality()
-                    .equals(other.overview, overview)) &&
-            (identical(other.popularity, popularity) ||
-                const DeepCollectionEquality()
-                    .equals(other.popularity, popularity)) &&
             (identical(other.poster_path, poster_path) ||
                 const DeepCollectionEquality()
                     .equals(other.poster_path, poster_path)) &&
-            (identical(other.release_date, release_date) ||
-                const DeepCollectionEquality()
-                    .equals(other.release_date, release_date)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.video, video) ||
-                const DeepCollectionEquality().equals(other.video, video)) &&
             (identical(other.vote_average, vote_average) ||
                 const DeepCollectionEquality()
                     .equals(other.vote_average, vote_average)) &&
@@ -626,18 +481,11 @@ class _$_Result implements _Result {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(adult) ^
-      const DeepCollectionEquality().hash(backdrop_path) ^
       const DeepCollectionEquality().hash(genre_ids) ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(original_language) ^
       const DeepCollectionEquality().hash(original_title) ^
-      const DeepCollectionEquality().hash(overview) ^
-      const DeepCollectionEquality().hash(popularity) ^
       const DeepCollectionEquality().hash(poster_path) ^
-      const DeepCollectionEquality().hash(release_date) ^
       const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(video) ^
       const DeepCollectionEquality().hash(vote_average) ^
       const DeepCollectionEquality().hash(vote_count);
 
@@ -654,47 +502,26 @@ class _$_Result implements _Result {
 
 abstract class _Result implements Result {
   factory _Result(
-      {required bool adult,
-      required String? backdrop_path,
-      required List<int> genre_ids,
+      {required List<int> genre_ids,
       required int id,
-      required String original_language,
       required String original_title,
-      required String overview,
-      required double popularity,
       required String? poster_path,
-      required String release_date,
       required String title,
-      required bool video,
       required double vote_average,
       required int vote_count}) = _$_Result;
 
   factory _Result.fromJson(Map<String, dynamic> json) = _$_Result.fromJson;
 
   @override
-  bool get adult => throw _privateConstructorUsedError;
-  @override
-  String? get backdrop_path => throw _privateConstructorUsedError;
-  @override
   List<int> get genre_ids => throw _privateConstructorUsedError;
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  String get original_language => throw _privateConstructorUsedError;
-  @override
   String get original_title => throw _privateConstructorUsedError;
-  @override
-  String get overview => throw _privateConstructorUsedError;
-  @override
-  double get popularity => throw _privateConstructorUsedError;
   @override
   String? get poster_path => throw _privateConstructorUsedError;
   @override
-  String get release_date => throw _privateConstructorUsedError;
-  @override
   String get title => throw _privateConstructorUsedError;
-  @override
-  bool get video => throw _privateConstructorUsedError;
   @override
   double get vote_average => throw _privateConstructorUsedError;
   @override

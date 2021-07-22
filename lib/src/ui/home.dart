@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
             ),
             error: (err, stack) => Expanded(
               child: Center(
-                child: Text(err.toString()),
+                child: Text(stack.toString()),
               ),
             ),
           ),
