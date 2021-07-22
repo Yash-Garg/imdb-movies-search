@@ -1,4 +1,4 @@
-package com.example.imdb_task
+package com.imdb.assignment
 
 import io.flutter.embedding.android.FlutterActivity
 
