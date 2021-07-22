@@ -8,37 +8,56 @@ part of 'search.dart';
 
 _$_SearchResults _$_$_SearchResultsFromJson(Map<String, dynamic> json) {
   return _$_SearchResults(
-    searchType: json['searchType'] as String,
-    expression: json['expression'] as String,
+    page: json['page'] as int,
     results: (json['results'] as List<dynamic>)
         .map((e) => Result.fromJson(e as Map<String, dynamic>))
         .toList(),
-    errorMessage: json['errorMessage'] as String,
+    total_pages: json['total_pages'] as int,
+    total_results: json['total_results'] as int,
   );
 }
 
 Map<String, dynamic> _$_$_SearchResultsToJson(_$_SearchResults instance) =>
     <String, dynamic>{
-      'searchType': instance.searchType,
-      'expression': instance.expression,
+      'page': instance.page,
       'results': instance.results,
-      'errorMessage': instance.errorMessage,
+      'total_pages': instance.total_pages,
+      'total_results': instance.total_results,
     };
 
 _$_Result _$_$_ResultFromJson(Map<String, dynamic> json) {
   return _$_Result(
-    id: json['id'] as String,
-    resultType: json['resultType'] as String,
-    image: json['image'] as String,
+    adult: json['adult'] as bool,
+    backdrop_path: json['backdrop_path'] as String?,
+    genre_ids:
+        (json['genre_ids'] as List<dynamic>).map((e) => e as int).toList(),
+    id: json['id'] as int,
+    original_language: json['original_language'] as String,
+    original_title: json['original_title'] as String,
+    overview: json['overview'] as String,
+    popularity: (json['popularity'] as num).toDouble(),
+    poster_path: json['poster_path'] as String?,
+    release_date: DateTime.parse(json['release_date'] as String),
     title: json['title'] as String,
-    description: json['description'] as String,
+    video: json['video'] as bool,
+    vote_average: (json['vote_average'] as num).toDouble(),
+    vote_count: json['vote_count'] as int,
   );
 }
 
 Map<String, dynamic> _$_$_ResultToJson(_$_Result instance) => <String, dynamic>{
+      'adult': instance.adult,
+      'backdrop_path': instance.backdrop_path,
+      'genre_ids': instance.genre_ids,
       'id': instance.id,
-      'resultType': instance.resultType,
-      'image': instance.image,
+      'original_language': instance.original_language,
+      'original_title': instance.original_title,
+      'overview': instance.overview,
+      'popularity': instance.popularity,
+      'poster_path': instance.poster_path,
+      'release_date': instance.release_date.toIso8601String(),
       'title': instance.title,
-      'description': instance.description,
+      'video': instance.video,
+      'vote_average': instance.vote_average,
+      'vote_count': instance.vote_count,
     };

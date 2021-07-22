@@ -15,7 +15,7 @@ class ImdbRepository {
   Future<List<Result>> getSearchResults(String query) async {
     try {
       final response = await read(dioProvider).get(
-        Constants.BASE_URL + query,
+        Constants.BASE_URL + '&language=en-US&query=$query&page=1',
         options: Options(responseType: ResponseType.json),
       );
 

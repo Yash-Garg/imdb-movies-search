@@ -3,6 +3,7 @@ include: package:lints/recommended.yaml
 linter:
   rules:
     constant_identifier_names: false
+    non_constant_identifier_names: false
     always_put_required_named_parameters_first: false
     avoid_classes_with_only_static_members: false
     sort_constructors_first: false

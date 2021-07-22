@@ -6,10 +6,10 @@ part 'search.g.dart';
 @freezed
 class SearchResults with _$SearchResults {
   factory SearchResults({
-    required String searchType,
-    required String expression,
+    required int page,
     required List<Result> results,
-    required String errorMessage,
+    required int total_pages,
+    required int total_results,
   }) = _SearchResults;
 
   factory SearchResults.fromJson(Map<String, dynamic> json) =>
@@ -19,11 +19,20 @@ class SearchResults with _$SearchResults {
 @freezed
 class Result with _$Result {
   factory Result({
-    required String id,
-    required String resultType,
-    required String image,
+    required bool adult,
+    required String? backdrop_path,
+    required List<int> genre_ids,
+    required int id,
+    required String original_language,
+    required String original_title,
+    required String overview,
+    required double popularity,
+    required String? poster_path,
+    required DateTime release_date,
     required String title,
-    required String description,
+    required bool video,
+    required double vote_average,
+    required int vote_count,
   }) = _Result;
 
   factory Result.fromJson(Map<String, dynamic> json) => _$ResultFromJson(json);

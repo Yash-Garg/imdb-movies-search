@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    // context.read(moviesProvider.notifier).getResults('maze');
+    context.read(moviesProvider.notifier).getResults('maze');
   }
 
   @override
@@ -59,7 +59,11 @@ class _HomePageState extends State<HomePage> {
             success: (value) => Expanded(
               child: ResultListView(results: value!),
             ),
-            error: (err, stack) => Center(child: Text(err.toString())),
+            error: (err, stack) => Expanded(
+              child: Center(
+                child: Text(err.toString()),
+              ),
+            ),
           ),
         ],
       ),
