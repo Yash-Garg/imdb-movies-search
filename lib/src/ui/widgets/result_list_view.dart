@@ -17,10 +17,15 @@ class ResultListView extends StatelessWidget {
       itemBuilder: (context, index) {
         var currentResult = results[index];
         var rating = currentResult.vote_average;
+        var genreIds = currentResult.genre_ids;
 
         final genres = <String>[];
-        for (var id in currentResult.genre_ids) {
-          genres.add(Constants.genres[id]!);
+        if (genreIds.isNotEmpty) {
+          for (var id in genreIds) {
+            genres.add(Constants.genres[id]!);
+          }
+        } else {
+          genres.add('Unknown');
         }
 
         late Color ratingColor;
