@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../data/models/search.dart';
 import '../data/repository/imdb_repository.dart';
 import '../data/state/result_state_notifier.dart';
+import 'widgets/loading.dart';
+import 'widgets/result_list_view.dart';
 
 final moviesProvider =
     StateNotifierProvider<GetResultRequestsNotifier, ResultState<List<Result>>>(
@@ -20,6 +23,12 @@ class HomePage extends StatefulHookWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    // context.read(moviesProvider.notifier).getResults('maze');
+  }
+
   @override
   Widget build(BuildContext context) {
     final _searchController = useTextEditingController();
@@ -44,6 +53,13 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.all(10),
             child: CustomSearchBar(searchController: _searchController),
+          ),
+          useProvider(moviesProvider).when(
+            loading: () => CustomLoading(),
+            success: (value) => Expanded(
+              child: ResultListView(results: value!),
+            ),
+            error: (err, stack) => Center(child: Text(err.toString())),
           ),
         ],
       ),

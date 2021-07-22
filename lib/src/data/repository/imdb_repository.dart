@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../constants.dart';
 import '../models/search.dart';
 import '../state/result_state_notifier.dart';
 
@@ -11,8 +12,20 @@ class ImdbRepository {
   ImdbRepository(this.read);
   final Reader read;
 
-  Future<List<Result>> getSearchResults(String query) {
-    return Future.value();
+  Future<List<Result>> getSearchResults(String query) async {
+    try {
+      final response = await read(dioProvider).get(
+        Constants.BASE_URL + query,
+        options: Options(responseType: ResponseType.json),
+      );
+
+      final List<Result> moviesList = List<Result>.from(
+          response.data['results'].map((i) => Result.fromJson(i)));
+
+      return moviesList;
+    } on DioError {
+      rethrow;
+    }
   }
 }
 
