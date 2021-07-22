@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'src/ui/home.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    );
+
+    return MaterialApp(
+      title: 'IMDB Task App',
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
   }
 }
