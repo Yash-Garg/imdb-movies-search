@@ -7,6 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../data/models/search.dart';
 import '../data/repository/imdb_repository.dart';
 import '../data/state/result_state_notifier.dart';
+import 'widgets/error_text.dart';
 import 'widgets/loading.dart';
 import 'widgets/result_list_view.dart';
 
@@ -59,10 +60,8 @@ class _HomePageState extends State<HomePage> {
             success: (value) => Expanded(
               child: ResultListView(results: value!),
             ),
-            error: (err, stack) => Expanded(
-              child: Center(
-                child: Text(err.toString()),
-              ),
+            error: (e, s) => Expanded(
+              child: ErrorText(text: 'Error Loading Data'),
             ),
           ),
         ],
