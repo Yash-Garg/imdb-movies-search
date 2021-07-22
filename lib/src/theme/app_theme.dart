@@ -6,5 +6,5 @@ const Color funkyRed = Color(0xFFF54748);
 final ThemeData appTheme = ThemeData(
   primaryColor: funkyRed,
   brightness: Brightness.light,
-  fontFamily: GoogleFonts.ubuntu().fontFamily,
+  fontFamily: GoogleFonts.rubik().fontFamily,
 );
