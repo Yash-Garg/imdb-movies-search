@@ -46,9 +46,7 @@ class ResultListView extends StatelessWidget {
                   elevation: 3,
                   child: Container(
                     height: 150,
-                    padding: EdgeInsets.only(
-                      left: MediaQuery.of(context).size.width * 0.4,
-                    ),
+                    padding: EdgeInsets.only(left: 170, right: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,

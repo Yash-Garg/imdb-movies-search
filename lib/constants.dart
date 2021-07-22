@@ -1,8 +1,10 @@
 class Constants {
   static const API_KEY = '';
+  static const TRENDING_URL =
+      'https://api.themoviedb.org/3/trending/movie/week?api_key=$API_KEY';
   static const BASE_URL =
       'https://api.themoviedb.org/3/search/movie?api_key=$API_KEY';
-  static const BACKDROP_BASE_URL = 'https://image.tmdb.org/t/p/original';
+  static const BACKDROP_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
   static const genres = {
     28: 'Action',

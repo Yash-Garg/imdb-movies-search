@@ -27,6 +27,22 @@ class ImdbRepository {
       rethrow;
     }
   }
+
+  Future<List<Result>> getLatestMovies() async {
+    try {
+      final response = await read(dioProvider).get(
+        Constants.TRENDING_URL,
+        options: Options(responseType: ResponseType.json),
+      );
+
+      final List<Result> moviesList = List<Result>.from(
+          response.data['results'].map((i) => Result.fromJson(i)));
+
+      return moviesList;
+    } on DioError {
+      rethrow;
+    }
+  }
 }
 
 class GetResultRequestsNotifier extends ResultStateNotifier<List<Result>> {
@@ -36,5 +52,9 @@ class GetResultRequestsNotifier extends ResultStateNotifier<List<Result>> {
 
   getResults(String query) {
     makeRequest(() => _imdbRepository.getSearchResults(query));
+  }
+
+  getLatest() {
+    makeRequest(() => _imdbRepository.getLatestMovies());
   }
 }
