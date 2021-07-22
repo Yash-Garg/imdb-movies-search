@@ -102,11 +102,14 @@ class CustomSearchBar extends StatelessWidget {
                     hintText: 'Search for Movies',
                     border: InputBorder.none,
                   ),
-                  onSubmitted: (value) async {},
+                  onSubmitted: (value) async =>
+                      context.read(moviesProvider.notifier).getResults(value),
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () => context
+                    .read(moviesProvider.notifier)
+                    .getResults(searchController.text),
                 icon: Icon(Icons.search),
               ),
             ],

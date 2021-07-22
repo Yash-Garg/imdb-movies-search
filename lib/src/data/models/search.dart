@@ -28,7 +28,7 @@ class Result with _$Result {
     required String overview,
     required double popularity,
     required String? poster_path,
-    required DateTime release_date,
+    required String release_date,
     required String title,
     required bool video,
     required double vote_average,

@@ -254,7 +254,7 @@ class _$ResultTearOff {
       required String overview,
       required double popularity,
       required String? poster_path,
-      required DateTime release_date,
+      required String release_date,
       required String title,
       required bool video,
       required double vote_average,
@@ -296,7 +296,7 @@ mixin _$Result {
   String get overview => throw _privateConstructorUsedError;
   double get popularity => throw _privateConstructorUsedError;
   String? get poster_path => throw _privateConstructorUsedError;
-  DateTime get release_date => throw _privateConstructorUsedError;
+  String get release_date => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   bool get video => throw _privateConstructorUsedError;
   double get vote_average => throw _privateConstructorUsedError;
@@ -321,7 +321,7 @@ abstract class $ResultCopyWith<$Res> {
       String overview,
       double popularity,
       String? poster_path,
-      DateTime release_date,
+      String release_date,
       String title,
       bool video,
       double vote_average,
@@ -393,7 +393,7 @@ class _$ResultCopyWithImpl<$Res> implements $ResultCopyWith<$Res> {
       release_date: release_date == freezed
           ? _value.release_date
           : release_date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as String,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -429,7 +429,7 @@ abstract class _$ResultCopyWith<$Res> implements $ResultCopyWith<$Res> {
       String overview,
       double popularity,
       String? poster_path,
-      DateTime release_date,
+      String release_date,
       String title,
       bool video,
       double vote_average,
@@ -502,7 +502,7 @@ class __$ResultCopyWithImpl<$Res> extends _$ResultCopyWithImpl<$Res>
       release_date: release_date == freezed
           ? _value.release_date
           : release_date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as String,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -564,7 +564,7 @@ class _$_Result implements _Result {
   @override
   final String? poster_path;
   @override
-  final DateTime release_date;
+  final String release_date;
   @override
   final String title;
   @override
@@ -663,7 +663,7 @@ abstract class _Result implements Result {
       required String overview,
       required double popularity,
       required String? poster_path,
-      required DateTime release_date,
+      required String release_date,
       required String title,
       required bool video,
       required double vote_average,
@@ -690,7 +690,7 @@ abstract class _Result implements Result {
   @override
   String? get poster_path => throw _privateConstructorUsedError;
   @override
-  DateTime get release_date => throw _privateConstructorUsedError;
+  String get release_date => throw _privateConstructorUsedError;
   @override
   String get title => throw _privateConstructorUsedError;
   @override
