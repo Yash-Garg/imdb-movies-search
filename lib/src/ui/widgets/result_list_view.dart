@@ -16,9 +16,20 @@ class ResultListView extends StatelessWidget {
       itemCount: results.length,
       itemBuilder: (context, index) {
         var currentResult = results[index];
+        var rating = currentResult.vote_average;
+
         final genres = <String>[];
         for (var id in currentResult.genre_ids) {
           genres.add(Constants.genres[id]!);
+        }
+
+        late Color ratingColor;
+        if (rating >= 7) {
+          ratingColor = Colors.green;
+        } else if (rating > 4) {
+          ratingColor = Colors.blueAccent;
+        } else {
+          ratingColor = Colors.redAccent;
         }
 
         return Card(
@@ -30,18 +41,15 @@ class ResultListView extends StatelessWidget {
           child: Container(
             height: 150,
             child: ListTile(
-              leading: currentResult.poster_path == null
-                  // TODO: Add a placeholder image asset
-                  ? Text('No Poster')
-                  // TODO: Fix the alignment and size of image
-                  : Container(
-                      height: 200,
-                      child: Image.network(
-                        Constants.BACKDROP_BASE_URL +
-                            currentResult.poster_path!,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+              // leading: currentResult.poster_path == null
+              //     ? Text('No Poster')
+              //     : Container(
+              //         height: 200,
+              //         child: Image.network(
+              //           Constants.BACKDROP_BASE_URL +
+              //               currentResult.poster_path!,
+              //         ),
+              //       ),
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -55,9 +63,18 @@ class ResultListView extends StatelessWidget {
                     genres.join(' | '),
                     style: TextStyle(fontSize: 13, color: mildWhite),
                   ),
-                  SizedBox(height: 5),
-                  // TODO: Add a rounded button below the rating
-                  Text('${currentResult.vote_average} IMDB'),
+                  SizedBox(height: 10),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                      color: ratingColor,
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 3),
+                    child: Text(
+                      '$rating IMDB',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                 ],
               ),
             ),
